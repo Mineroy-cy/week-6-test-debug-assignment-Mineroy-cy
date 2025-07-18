@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const bugController = require('../controllers/bugController');
+
+// GET /api/bugs - Get all bugs
+router.get('/', bugController.getBugs);
+
+// GET /api/bugs/:id - Get a single bug
+router.get('/:id', bugController.getBug);
+
+// POST /api/bugs - Create a new bug
+router.post('/', bugController.createBug);
+
+// PUT /api/bugs/:id - Update a bug
+router.put('/:id', bugController.updateBug);
+
+// DELETE /api/bugs/:id - Delete a bug
+router.delete('/:id', bugController.deleteBug);
+
+module.exports = router;
