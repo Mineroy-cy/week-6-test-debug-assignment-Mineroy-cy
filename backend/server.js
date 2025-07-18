@@ -19,7 +19,7 @@ app.use('/api/bugs', bugRoutes);
 app.use(errorHandler);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI_PRODUCTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
